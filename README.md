@@ -25,7 +25,7 @@ Only the file `rock_paper_scissors2.html` consists of a version of the game that
 
 * Open your terminal - Windows: `Win + R`, then type `cmd` | Mac: `Command + space`, then type `Terminal`.
 * Navigate to a directory of your choosing using the `cd` command.
-* Run this command in your OS terminal: `git@github.com:German-Cobian/google-homepage.git` to get a copy of the project.
+* Run this command in your OS terminal: `git@github.com:German-Cobian/Rock-Paper-Scissors.git` to get a copy of the project.
 * Using your web browser's navigation bar, go to the project's directory and then select the file that accords to the version of the game that you wish to play.
   * For a single round version of the game, select `rock_paper_scissors.html`
   * For a five round version of the game, select `rock_paper_scissors.x5html`
