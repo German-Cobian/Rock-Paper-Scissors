@@ -7,7 +7,7 @@ A simple implementation of the grade-school classic “rock paper scissors” ga
 The files `rock_paper_scissors.html`, `rock_paper_scissors.x5html` and `rock_paper_scissors_loop.html` are versions of the game that can be played by inputting the player's choices into pop-up windows and seeing the outcomes in the developer's tools window.
 
 ![Pop-up window](/assets/Pop-up-window.png?raw=true "Pop-up window")
-![Developer's tools window](/assets/Developer's-tools.png?raw=true "Developer's tools window")
+![Developer's tools window](/assets/Developers-tools.png?raw=true "Developer's tools window")
 
 Only the file `rock_paper_scissors2.html` consists of a version of the game that can be played fully on the web browser.
 
