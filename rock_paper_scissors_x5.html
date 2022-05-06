@@ -1,0 +1,81 @@
+<script>
+    let round = 1;
+    let playerScore = 0;
+    let computerScore = 0; 
+ 
+    function computerPlay() {  
+        let selectRandom = [Math.floor(Math.random() * 10) + 1]
+        if (selectRandom <= 3) {
+                return "rock"; }
+        else if (selectRandom <= 6) {
+                return "paper"; }
+        else if (selectRandom >6) {
+                return "scissors"; } 
+    }
+           
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection == computerSelection) {
+            round++;
+            return "It's a tie!"; }
+        else if ((playerSelection == "rock") && (computerSelection == "paper")) {
+            round++;
+            computerScore++;
+            return "You lose! Paper beats rock."; }
+        else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
+            round++;
+            playerScore++;
+            return "You win! Rock beats scissors."; }
+        else if ((playerSelection == "paper") && (computerSelection == "rock")) {
+            round++;
+            playerScore++;
+            return "You win! Paper beats rock"; }
+        else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
+            round++;
+            computerScore++;
+            return "You lose! Scissors beats paper.";  }
+        else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
+            round++;
+            computerScore++;
+            return "You lose! Rock beats scissors"; }
+        else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
+            round++;
+            playerScore++;
+            return "You win! Scissors beats paper."; }
+    }    
+
+    function bridgeRounds() {
+        var select = prompt("Pick either rock, paper or scissors.");
+        let playerSelection = select.toLowerCase();
+        let computerSelection = computerPlay();
+        
+        console.log("Round: " + round);
+        console.log("You have chosen " + playerSelection);
+        console.log("Computer has chosen " + computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log("Your score: " + playerScore);
+        console.log("Computer Score: " + computerScore); 
+    }
+    function game() {     
+    
+    bridgeRounds();
+    bridgeRounds();
+    bridgeRounds();
+    bridgeRounds();
+    bridgeRounds();
+    
+    if (playerScore > computerScore) {
+        console.log("Final player Score: " + playerScore);
+        console.log("Final computer Score: " + computerScore);
+        console.log("You win the game!"); }
+    else if (computerScore < playerScore) {
+        console.log("Final player Score: " + playerScore);
+        console.log("Final computer Score: " + computerScore);
+        console.log("You lost!"); }
+
+    else if (computerScore == playerScore) {
+        console.log("Final player Score: " + playerScore);
+        console.log("Final computer Score: " + computerScore);
+        console.log("It's a tie!"); }
+    }
+game(); 
+</script>

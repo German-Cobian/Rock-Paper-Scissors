@@ -1,0 +1,43 @@
+<script>
+        let playerScore = 0;
+        let computerScore = 0;
+
+        var select = prompt("Pick either rock, paper or scissors.");
+        let playerSelection = select.toLowerCase();
+         
+        function computerPlay () {  
+            let selectRandom = [Math.floor(Math.random() * 10) + 1]
+            if (selectRandom <= 3) {
+                return "rock"; }
+                else if (selectRandom <= 6) {
+                return "paper"; }
+                else if (selectRandom >6) {
+                return "scissors"; }
+        }  
+        let computerSelection = computerPlay()
+        
+        function playRound(playerSelection, computerSelection) {
+        if (playerSelection == computerSelection) {
+            return "It's a tie!"; }
+        else if ((playerSelection == "rock") && (computerSelection == "paper")) {
+            computerScore++;
+            return "You lose! Paper beats rock."; }
+        else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
+            playerScore++;
+            return "You win! Rock beats scissors."; }
+        else if ((playerSelection == "paper") && (computerSelection == "rock")) {
+            playerScore++;
+            return "You win! Paper beats rock"; }
+        else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
+            computerScore++;
+            return "You lose! Scissors beat paper.";  }
+        else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
+            computerScore++;
+            return "You lose! Rock beats scissors"; }
+        else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
+            playerScore++;
+            return "You win! Scissors beat paper."; }
+    }   
+    console.log(playRound(playerSelection, computerSelection)); 
+    console.log("Player Score " + playerScore + "," + " Computer Score " + computerScore);      
+</script>
